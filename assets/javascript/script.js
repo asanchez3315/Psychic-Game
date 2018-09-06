@@ -1,6 +1,6 @@
  // console.log('running script')
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices =['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var words =['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
     
     var wins = 0;
@@ -9,16 +9,15 @@
 	  var letterToGuess;
     var guessesUsed ;
 
-  
-   
    function display(){
 
    document.onkeyup = function(event) {
 
+
        
 var userGuess = event.key.toLowerCase();    
 
-if(userGuess === letterToGuess ){
+if(userGuess === wordToGuess ){
  win();
  alert("you win!")
  
@@ -62,7 +61,7 @@ function fail(letter) {
 function resetGame() {
   guessesLeft =10;
   guessesUsed = [];
-  letterToGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  wordToGuess = words[Math.floor(Math.random() * words.length)];
 
  }
 
